@@ -1,0 +1,81 @@
+:root {
+  --main-color: black;
+  --background-color: #dcdad2;
+  --headerAndFooter-color: #a3b18a;
+  --border-color: #595b5c;
+  --hover-color: #588157;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  background-color: var(--background-color);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  @media (width > 720px) {
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+
+  @media (width > 1024px) {
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+}
+header {
+  grid-area: header;
+  padding-top: 12px;
+}
+nav {
+  text-align: center;
+  background-color: var(--headerAndFooter-color);
+  border-radius: 20px;
+  padding-block: 1rem;
+  width: fit-content;
+  margin-inline: auto;
+  border: 2px solid var(--border-color);
+  position: sticky;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--main-color);
+  padding: 1rem;
+}
+#hoverleft:hover {
+  background-color: var(--hover-color);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+#hoverright:hover {
+  background-color: var(--hover-color);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+nav a:hover {
+  background-color: var(--hover-color);
+}
+nav a.active {
+  text-shadow: 1px 0 black;
+}
