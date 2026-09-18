@@ -37,7 +37,7 @@
 }
 header {
   grid-area: header;
-  padding-top: 12px;
+  padding-top: 11px;
 }
 nav {
   text-align: center;
