@@ -22,23 +22,22 @@
 
   @media (max-width: 720px) {
     .container {
-      grid-template-columns: 1fr;
       grid-template-areas:
         "header"
         "main"
         "footer";
     }
     nav {
-      border-radius: 0;
-      padding-block: 0.5rem;
+      padding-block: 0.7rem;
       border-radius: 20px;
+      font-size: 1rem;
     }
     nav a {
-      padding: 0.5rem;
+      padding: 0.7rem;
     }
   }
 
-  @media (max-width: 720px) {
+  @media (width > 720px) {
     .container {
       grid-template-areas:
         "header header header"
