@@ -39,6 +39,7 @@
     }
     .introtext {
       margin: 20%;
+      margin-block: 9%;
       font-size: 1.2rem;
     }
     header {
@@ -140,6 +141,5 @@ nav a.active {
   color: var(--text-color);
   grid-area: main;
   white-space: nowrap;
-  font-size: 1rem;
   display: flex;
 }
