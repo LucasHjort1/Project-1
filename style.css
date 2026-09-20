@@ -1,9 +1,10 @@
 :root {
-  --main-color: black;
-  --background-color: #dcdad2;
-  --headerAndFooter-color: #a3b18a;
-  --border-color: #595b5c;
-  --hover-color: #588157;
+  --main-color: 202124;
+  --background-color: #fafaf8;
+  --headerAndFooter-color: #6b6d7085;
+  --border-color: #6b6d70;
+  --hover-color: #6c8ead;
+  --text-color: #202124;
 }
 * {
   box-sizing: border-box;
@@ -14,11 +15,58 @@
   display: grid;
   background-color: var(--background-color);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   grid-template-areas:
     "header header header"
     "main main main"
     "footer footer footer";
+
+  @media (width>= 1024px) {
+    .container {
+      grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+    nav {
+      padding-block: 1rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      padding: 1rem;
+    }
+    .introtext {
+      margin: 20%;
+      font-size: 1.2rem;
+    }
+    header {
+      padding-top: 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+    nav {
+      padding-block: 0.7rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      padding: 1rem;
+    }
+    .introtext {
+      margin: 10%;
+      font-size: 1.1rem;
+    }
+  }
 
   @media (max-width: 720px) {
     .container {
@@ -32,26 +80,14 @@
       border-radius: 20px;
       font-size: 1rem;
     }
+
     nav a {
       padding: 0.7rem;
     }
-  }
-
-  @media (width > 720px) {
-    .container {
-      grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
+    .introtext {
+      margin-inline: 10%;
+      margin-block: 20px;
+      font-size: 1rem;
     }
   }
 }
@@ -72,6 +108,7 @@ nav {
 nav ul {
   margin: 0;
   padding: 0;
+  white-space: nowrap;
 }
 nav li {
   display: inline;
@@ -80,7 +117,7 @@ nav li {
 }
 nav a {
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--text-color);
   padding: 1rem;
 }
 #hoverleft:hover {
@@ -97,5 +134,12 @@ nav a:hover {
   background-color: var(--hover-color);
 }
 nav a.active {
-  text-shadow: 1px 0 black;
+  text-shadow: 1px 0 var(--text-color);
+}
+.introtext {
+  color: var(--text-color);
+  grid-area: main;
+  white-space: nowrap;
+  font-size: 1rem;
+  display: flex;
 }
