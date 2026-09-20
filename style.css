@@ -16,6 +16,7 @@
   background-color: var(--background-color);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "header header header"
     "main main main"
@@ -38,9 +39,9 @@
       padding: 1rem;
     }
     .introtext {
-      margin: 20%;
-      margin-block: 9%;
       font-size: 1.2rem;
+      margin-inline: 20%;
+      margin-top: 9%;
     }
     header {
       padding-top: 20px;
@@ -64,8 +65,8 @@
       padding: 1rem;
     }
     .introtext {
-      margin: 10%;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin: 15%;
     }
   }
 
@@ -86,9 +87,8 @@
       padding: 0.7rem;
     }
     .introtext {
-      margin-inline: 10%;
-      margin-block: 20px;
-      font-size: 1rem;
+      font-size: 0.7rem;
+      margin: 8%;
     }
   }
 }
@@ -140,6 +140,7 @@ nav a.active {
 .introtext {
   color: var(--text-color);
   grid-area: main;
-  white-space: nowrap;
   display: flex;
+  flex-direction: column;
+  white-space: nowrap;
 }
