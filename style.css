@@ -1,10 +1,10 @@
 :root {
   --main-color: 202124;
   --background-color: #fafaf8;
-  --headerAndFooter-color: #6b6d7085;
+  --headerAndFooter-color: #6b6d7040;
   --border-color: #6b6d70;
   --hover-color: #6c8ead;
-  --text-color: #202124;
+  --text-color: #222b31;
 }
 * {
   box-sizing: border-box;
@@ -13,19 +13,18 @@
 .container {
   display: grid;
   background-color: var(--background-color);
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
     "header header header"
-    "main main main"
+    "left main right"
     "footer footer footer";
 
   @media (width>= 1024px) {
     .container {
       grid-template-areas:
         "header header header"
-        "main main main"
+        "left main right"
         "footer footer footer";
     }
     nav {
@@ -36,11 +35,6 @@
 
     nav a {
       padding: 1rem;
-    }
-    .introtext {
-      font-size: 1.2rem;
-      margin-inline: 20%;
-      margin-top: 9%;
     }
     header {
       padding-top: 20px;
@@ -63,10 +57,6 @@
     nav a {
       padding: 0.8rem;
     }
-    .introtext {
-      font-size: 1rem;
-      margin: 15%;
-    }
   }
 
   @media (max-width: 720px) {
@@ -85,15 +75,17 @@
     nav a {
       padding: 0.7rem;
     }
-    .introtext {
-      font-size: 0.7rem;
-      margin: 8%;
-    }
   }
 }
 header {
   grid-area: header;
   padding-top: 11px;
+}
+.left {
+  grid-area: left;
+}
+.right {
+  grid-area: right;
 }
 nav {
   text-align: center;
@@ -103,6 +95,7 @@ nav {
   width: fit-content;
   margin-inline: auto;
   border: 2px solid var(--border-color);
+  box-shadow: 1px 1px var(--border-color);
   position: sticky;
 }
 nav ul {
@@ -137,9 +130,18 @@ nav a.active {
   text-shadow: 1px 0 var(--text-color);
 }
 .introtext {
-  color: var(--text-color);
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
+}
+#largeLH {
+  font-size: 2rem;
+  font-weight: bold;
+}
+main {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: var(--text-color);
+}
+.portait {
+  width: 20%;
+  border-radius: 100%;
+  border: 2px solid var(--border-color);
 }
