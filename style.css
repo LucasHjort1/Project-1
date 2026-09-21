@@ -10,7 +10,6 @@
   box-sizing: border-box;
   margin: 0px;
 }
-
 .container {
   display: grid;
   background-color: var(--background-color);
@@ -56,13 +55,13 @@
         "footer footer footer";
     }
     nav {
-      padding-block: 0.7rem;
+      padding-block: 0.8rem;
       border-radius: 20px;
       font-size: 1.2rem;
     }
 
     nav a {
-      padding: 1rem;
+      padding: 0.8rem;
     }
     .introtext {
       font-size: 1rem;
