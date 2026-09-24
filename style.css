@@ -81,7 +81,8 @@ main {
 .portrait {
   max-width: 100%;
   height: auto;
-  border-radius: 100%;
+  border-radius: 50%;
+  padding: 4px;
   border: 2px solid black;
 }
 .intro {
@@ -105,7 +106,6 @@ footer {
   border-top: 1px solid var(--footer-border);
   color: var(--text-color);
   gap: 10%;
-  flex-direction: column;
   padding: 30px;
   padding-inline: 8%;
   font-size: 0.75rem;
@@ -120,6 +120,9 @@ footer {
 .footer-section a {
   text-decoration: none;
   color: var(--text-color);
+}
+.footer-section a:hover {
+  text-decoration: underline;
 }
 .footer-section > h4 {
   letter-spacing: 3px;
@@ -192,10 +195,12 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 0;
   }
   .footer-section {
     align-items: center;
     flex-direction: column;
     display: flex;
+    padding-block: 15px;
   }
 }
