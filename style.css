@@ -91,8 +91,9 @@ main {
   padding: 2rem;
 }
 .introtext {
-  max-width: 500px;
-  line-height: 2rem;
+  max-width: 60%;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
 }
 footer {
   grid-area: footer;
@@ -106,14 +107,6 @@ footer {
   justify-content: space-between;
 }
 @media (min-width: 1025px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
   nav {
     padding-block: 1rem;
     font-size: 1.2rem;
@@ -131,13 +124,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
   nav {
     padding-block: 0.7rem;
     font-size: 1rem;
@@ -149,16 +135,14 @@ footer {
   .portrait {
     width: 200px;
   }
+  .introtext {
+    max-width: 80%;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (max-width: 720px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
   nav {
     padding-block: 0.5rem;
     font-size: 0.9rem;
@@ -172,5 +156,10 @@ footer {
   }
   .intro {
     flex-direction: column;
+  }
+  .introtext {
+    max-width: 90%;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 }
