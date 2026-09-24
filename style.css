@@ -1,10 +1,12 @@
 :root {
   --main-color: 202124;
   --background-color: #fafaf8;
-  --headerAndFooter-color: #6b6d7040;
+  --header-color: #a0a0a140;
   --border-color: #6b6d70;
   --hover-color: #6c8ead;
   --text-color: #222b31;
+  --footer-border: #d9d7d2;
+  --footer-color: #f5f4f0;
 }
 * {
   box-sizing: border-box;
@@ -31,7 +33,7 @@ header {
 
 nav {
   text-align: center;
-  background-color: var(--headerAndFooter-color);
+  background-color: var(--header-color);
   border-radius: 20px;
   padding-block: 1rem;
   width: fit-content;
@@ -92,19 +94,35 @@ main {
 }
 .introtext {
   max-width: 60%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 3.5rem;
 }
 footer {
+  display: grid;
   grid-area: footer;
-  background-color: var(--headerAndFooter-color);
-  border-top: 2px solid var(--border-color);
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  background-color: var(--footer-color);
+  border-top: 1px solid var(--footer-border);
+  color: var(--text-color);
+  gap: 10%;
+  flex-direction: column;
+  padding: 30px;
+  padding-inline: 8%;
+  font-size: 0.75rem;
 }
-.footerList {
-  align-items: center;
+.footer-section ul {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  line-height: 1.5rem;
+}
+.footer-section a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.footer-section > h4 {
+  letter-spacing: 3px;
 }
 @media (min-width: 1025px) {
   nav {
@@ -136,9 +154,17 @@ footer {
     width: 200px;
   }
   .introtext {
-    max-width: 80%;
+    max-width: 60%;
     font-size: 1.2rem;
     line-height: 2.5rem;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .footer-section {
+    justify-items: center;
   }
 }
 
@@ -161,5 +187,15 @@ footer {
     max-width: 90%;
     font-size: 1rem;
     line-height: 2rem;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .footer-section {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
   }
 }
