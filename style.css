@@ -69,10 +69,9 @@ nav a {
 nav a:hover {
   background-color: var(--hover-color);
 }
-nav a.active {
+.active {
   text-shadow: 1px 0 var(--text-color);
 }
-
 main {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: var(--text-color);
@@ -95,9 +94,37 @@ main {
 }
 .introtext {
   max-width: 60%;
-  font-size: 1.3rem;
-  line-height: 3.5rem;
+  font-size: 1.1rem;
+  line-height: 3rem;
 }
+
+.portfolioBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  margin-inline: 15%;
+  margin-block: 30px;
+  gap: 1.5rem;
+}
+.portfolioBoxes div {
+  width: 100%;
+  background-color: var(--footer-color);
+  box-shadow: 1px 1px var(--border-color);
+  height: auto;
+}
+.portfolioBoxes img {
+  width: 100%;
+}
+.portfolioBoxes div p {
+  padding: 10px;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+.portfolioBoxes div h4 {
+  justify-self: center;
+  padding-top: 5px;
+}
+
 footer {
   display: grid;
   grid-area: footer;
@@ -158,8 +185,16 @@ footer {
   }
   .introtext {
     max-width: 60%;
-    font-size: 1.2rem;
-    line-height: 2.5rem;
+    font-size: 1rem;
+    line-height: 2.2rem;
+  }
+  .portfolioBoxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-inline: 10%;
+    margin-top: 30px;
+    gap: 1rem;
   }
   footer {
     display: grid;
@@ -170,7 +205,6 @@ footer {
     justify-items: center;
   }
 }
-
 @media (max-width: 720px) {
   nav {
     padding-block: 0.5rem;
@@ -188,8 +222,16 @@ footer {
   }
   .introtext {
     max-width: 90%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 2rem;
+  }
+  .portfolioBoxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-inline: 10%;
+    margin-top: 30px;
+    gap: 1rem;
   }
   footer {
     display: grid;
