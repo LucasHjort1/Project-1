@@ -30,7 +30,6 @@ header {
   grid-area: header;
   padding-top: 11px;
 }
-
 nav {
   text-align: center;
   background-color: var(--header-color);
@@ -97,7 +96,6 @@ main {
   font-size: 1.1rem;
   line-height: 3rem;
 }
-
 .portfolioBoxes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -124,7 +122,6 @@ main {
   justify-self: center;
   padding-top: 5px;
 }
-
 footer {
   display: grid;
   grid-area: footer;
@@ -170,7 +167,6 @@ footer {
     width: 250px;
   }
 }
-
 @media (max-width: 1024px) {
   nav {
     padding-block: 0.7rem;
@@ -191,7 +187,6 @@ footer {
   .portfolioBoxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
     margin-inline: 10%;
     margin-top: 30px;
     gap: 1rem;
@@ -210,7 +205,6 @@ footer {
     padding-block: 0.5rem;
     font-size: 0.9rem;
   }
-
   nav a {
     padding: 0.5rem;
   }
@@ -228,7 +222,6 @@ footer {
   .portfolioBoxes {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
     margin-inline: 10%;
     margin-top: 30px;
     gap: 1rem;
