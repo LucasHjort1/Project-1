@@ -16,11 +16,8 @@
   display: grid;
   min-height: 100vh;
   background-color: var(--background-color);
-  font-family: Georgia, "Times New Roman", Times, serif;
-
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-
   grid-template-areas:
     "header"
     "main"
@@ -29,6 +26,7 @@
 header {
   grid-area: header;
   padding-top: 11px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 nav {
   text-align: center;
@@ -75,6 +73,7 @@ main {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: var(--text-color);
   grid-area: main;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .portrait {
   max-width: 100%;
@@ -96,29 +95,34 @@ main {
   font-size: 1.1rem;
   line-height: 3rem;
 }
-.portfolioBoxes {
+.mainBoxes {
   display: grid;
+  grid-area: main;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin-inline: 15%;
   margin-block: 30px;
   gap: 1.5rem;
 }
-.portfolioBoxes div {
+.mainBoxes div {
   width: 100%;
   background-color: var(--footer-color);
   box-shadow: 1px 1px var(--border-color);
-  height: auto;
+  overflow-wrap: anywhere;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.portfolioBoxes img {
+.mainBoxes div:hover {
+  box-shadow: 2px 2px 5px 5px var(--border-color);
+}
+.mainBoxes img {
   width: 100%;
 }
-.portfolioBoxes div p {
+.mainBoxes div p {
   padding: 10px;
   line-height: 1.5rem;
   font-size: 1.1rem;
 }
-.portfolioBoxes div h4 {
+.mainBoxes div h4 {
   justify-self: center;
   padding-top: 5px;
 }
@@ -133,6 +137,7 @@ footer {
   padding: 30px;
   padding-inline: 8%;
   font-size: 0.75rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .footer-section ul {
   list-style: none;
@@ -156,7 +161,6 @@ footer {
     padding-block: 1rem;
     font-size: 1.2rem;
   }
-
   nav a {
     padding: 1rem;
   }
@@ -172,7 +176,6 @@ footer {
     padding-block: 0.7rem;
     font-size: 1rem;
   }
-
   nav a {
     padding: 0.7rem;
   }
@@ -184,12 +187,15 @@ footer {
     font-size: 1rem;
     line-height: 2.2rem;
   }
-  .portfolioBoxes {
+  .mainBoxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-inline: 10%;
     margin-top: 30px;
     gap: 1rem;
+  }
+  .mainBoxes div p {
+    font-size: 0.9rem;
   }
   footer {
     display: grid;
@@ -219,12 +225,15 @@ footer {
     font-size: 0.9rem;
     line-height: 2rem;
   }
-  .portfolioBoxes {
+  .mainBoxes {
     display: grid;
     grid-template-columns: 1fr;
     margin-inline: 10%;
     margin-top: 30px;
     gap: 1rem;
+  }
+  .mainBoxes div p {
+    font-size: 0.9rem;
   }
   footer {
     display: grid;
