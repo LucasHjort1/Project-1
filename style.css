@@ -1,5 +1,5 @@
 :root {
-  --main-color: 202124;
+  --main-color: #202124;
   --background-color: #fafaf8;
   --header-color: #a0a0a140;
   --border-color: #6b6d70;
@@ -70,7 +70,6 @@ nav a:hover {
   text-shadow: 1px 0 var(--text-color);
 }
 main {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: var(--text-color);
   grid-area: main;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -125,6 +124,39 @@ main {
 .mainBoxes div h4 {
   justify-self: center;
   padding-top: 5px;
+}
+
+.cvIntro {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+.cvintrotxt {
+  max-width: 60%;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.cvmain {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 80%;
+  margin: auto;
+  border-top: 1px solid var(--footer-border);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 15px;
+  line-height: 1.2rem;
+}
+.cvleft {
+  grid-column: 1;
+}
+.cvright {
+  grid-column: 2;
+  border-left: 1px solid var(--footer-border);
+  border-bottom: 1px solid var(--footer-border);
+  padding: 10px;
 }
 footer {
   display: grid;
