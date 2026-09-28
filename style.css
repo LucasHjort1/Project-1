@@ -1,7 +1,7 @@
 :root {
   --main-color: #202124;
   --background-color: #fafaf8;
-  --header-color: #a0a0a140;
+  --header-color: #e3e3e2;
   --border-color: #6b6d70;
   --hover-color: #6c8ead;
   --text-color: #222b31;
@@ -121,42 +121,37 @@ main {
   line-height: 1.5rem;
   font-size: 1.1rem;
 }
-.mainBoxes div h4 {
+.mainBoxes div h1 {
+  font-size: 1rem;
   justify-self: center;
   padding-top: 5px;
 }
 
-.cvIntro {
-  grid-area: main;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  padding: 2rem;
-}
-.cvintrotxt {
-  max-width: 60%;
-  font-size: 1.1rem;
-  line-height: 2rem;
-}
 .cvmain {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   max-width: 80%;
   margin: auto;
   border-top: 1px solid var(--footer-border);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 15px;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 .cvleft {
   grid-column: 1;
+  padding: 15px;
 }
-.cvright {
+.cvright div {
   grid-column: 2;
+  padding: 15px;
   border-left: 1px solid var(--footer-border);
+}
+.cvright div:not(:last-child) {
   border-bottom: 1px solid var(--footer-border);
-  padding: 10px;
+}
+.cvmain ul li {
+  padding-block: 10px;
+}
+.cvmain h1 {
+  font-size: 1rem;
 }
 footer {
   display: grid;
@@ -185,7 +180,8 @@ footer {
 .footer-section a:hover {
   text-decoration: underline;
 }
-.footer-section > h4 {
+.footer-section > h1 {
+  font-size: 0.7rem;
   letter-spacing: 3px;
 }
 @media (min-width: 1025px) {
@@ -229,6 +225,10 @@ footer {
   .mainBoxes div p {
     font-size: 0.9rem;
   }
+  .cvmain {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -266,6 +266,21 @@ footer {
   }
   .mainBoxes div p {
     font-size: 0.9rem;
+  }
+  .cvmain {
+    grid-template-columns: 1fr;
+    display: block;
+    font-size: 0.8rem;
+  }
+  .cvright div {
+    border: 0;
+    padding: 0;
+    margin-block: 30px;
+    padding: 15px;
+    border-top: 1px solid var(--footer-border);
+  }
+  .cvright div:not(:last-child) {
+    border-bottom: none;
   }
   footer {
     display: grid;
