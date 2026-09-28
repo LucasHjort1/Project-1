@@ -155,7 +155,7 @@ main {
 footer {
   display: grid;
   grid-area: footer;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   background-color: var(--footer-color);
   border-top: 1px solid var(--footer-border);
   color: var(--text-color);
@@ -164,6 +164,7 @@ footer {
   padding-inline: 8%;
   font-size: 0.75rem;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
 }
 .footer-section ul {
   list-style: none;
