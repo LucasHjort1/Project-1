@@ -126,7 +126,6 @@ main {
   justify-self: center;
   padding-top: 5px;
 }
-
 .cvmain {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
