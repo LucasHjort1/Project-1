@@ -106,23 +106,33 @@ main {
 }
 #aboutimg {
   max-width: 35%;
-  border-radius: 70px;
+  border-radius: 20px;
   padding: 4px;
   border: 2px solid var(--border-color);
 }
 .aboutsections {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
   border-top: 1px solid var(--footer-border);
-  padding: 15px;
+}
+.aboutsectioninner {
+  max-width: 50%;
   line-height: 2rem;
-  font-size: 0.9rem;
+}
+.aboutsectioninner p {
+  margin-inline: auto;
 }
 .aboutsectioninner h1 {
   font-size: 1rem;
 }
-.aboutsectioninner {
-  max-width: 80%;
+.aboutimg {
+  max-width: 350px;
+  border-radius: 20px;
+  padding: 4px;
+  border: 2px solid var(--border-color);
 }
 .mainBoxes {
   display: grid;
@@ -182,6 +192,7 @@ main {
   font-size: 1rem;
 }
 footer {
+  grid-area: footer;
   background-color: var(--footer-color);
   border-top: 1px solid var(--footer-border);
   color: var(--text-color);
@@ -256,6 +267,7 @@ footer {
   }
   .aboutintro {
     flex-direction: column;
+    gap: 1rem;
   }
   .aboutintrotext {
     max-width: 90%;
@@ -263,7 +275,19 @@ footer {
     line-height: 2.5rem;
   }
   #aboutimg {
-    max-width: 60%;
+    max-width: 50%;
+  }
+  .aboutsections {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .aboutsectioninner {
+    order: 1;
+    max-width: 80%;
+  }
+  .aboutimg {
+    order: 2;
+    max-width: 300px;
   }
   .mainBoxes {
     display: grid;
@@ -307,6 +331,18 @@ footer {
   .aboutintrotext {
     font-size: 0.9rem;
     line-height: 2rem;
+  }
+  #aboutimg {
+    max-width: 250px;
+  }
+  .aboutsections {
+    font-size: 0.9rem;
+  }
+  .aboutsectioninner {
+    max-width: 90%;
+  }
+  .aboutimg {
+    max-width: 250px;
   }
   .mainBoxes {
     display: grid;
