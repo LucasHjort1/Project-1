@@ -175,6 +175,11 @@ main {
 }
 .cvleft {
   grid-column: 1;
+}
+.cvleft div:not(:last-child) {
+  border-bottom: 1px solid var(--footer-border);
+}
+.cvleft div {
   padding: 15px;
 }
 .cvright div {
